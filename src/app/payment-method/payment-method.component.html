@@ -1,0 +1,124 @@
+<app-header></app-header>
+
+<div class="container-fluid" id="src1">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4" style=" margin-top: 40px;">
+            <h4 class="text-light">Payment Method</h4>
+            <hr class="text-light">
+            <div class="card card-container" style="background: aliceblue; padding: 10px;">
+                <button class="btn btn-secondary"  (click)="btn1Function()">Mobile Banking <span style="float: right;"><img style="height: 30px; width: 50px;" src="../../assets/images/Bkash-logo.png" alt=""></span>  <span style="float: right;"><img style="height: 30px; width: 50px;" src="../../assets/images/Nagad-Logo.wine.png" alt=""></span></button>
+                <button class="btn btn-secondary" style="margin-top: 10px;" (click)="btn2Function()">Credit/Debit Card <span style="float: right;"><img style="height: 25px; width: 50px;" src="../../assets/images/discover.png" alt=""></span> <span style="float: right;"><img style="height: 25px; width: 50px;" src="../../assets/images/mastercard.png" alt=""></span> <span style="float: right;"><img style="height: 25px; width: 50px;" src="../../assets/images/visa.jpg" alt=""></span></button>
+                <br>
+                <form *ngIf="btn1" [formGroup]="form" (ngSubmit)="submit()">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Country</label>
+                                <select formControlName="purchaseCourseCountry" class="form-control">
+                                    <option value="bangladesh">Bangladesh</option>
+                                    <option value="india">India</option>
+                                    <option value="pakistan">Pakistan</option>
+                                    <option value="srilanka">Srilanka</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Account Type</label>
+                                <select formControlName="purchaseCourseAccountType" class="form-control">
+                                    <option value="bkash">Bkash</option>
+                                    <option value="nagad">Nagad</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row" hidden>
+                            <div class="col-md-12">
+                                <label>Course Id</label>
+                                <input formControlName="pCourseId" class="form-control" type="text" [(ngModel)]=this.course.course_id>
+                            </div>
+                            <div class="col-md-12">
+                                <label>Course Name</label>
+                                <input formControlName="purchaseCourseName" class="form-control" type="text" [(ngModel)]=this.course.courseName>
+                            </div>
+                            <div class="col-md-12">
+                                <label>Course Price</label>
+                                <input formControlName="purchaseCoursePrice" class="form-control" type="text" [(ngModel)]=this.course.coursePrice>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label>User ID</label>
+                                <input formControlName="purchaseCourseUserName" class="form-control" type="text">
+                            </div>
+                            <div class="col-md-12">
+                                <label>Account No.</label>
+                                <input formControlName="purchaseCourseUserAccount" class="form-control" type="text">
+                            </div>
+                            <div class="col-md-12">
+                                <label>Amount</label>
+                                <input formControlName="purchaseCoursePayment" class="form-control" type="text">
+                            </div>
+                            <div class="col-md-6">
+                                <label>Pin</label>
+                                <input class="form-control" type="text">
+                            </div>
+                            <div class="col-md-6">
+                                <label>Current Time</label>
+                                <input formControlName="purchaseCourseTime" class="form-control" type="text" [(ngModel)]= myDate>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button class="btn text-light" type="submit" style="background: rgba(0,8,51,0.9); padding: 5px; width: 100%; margin-bottom: 10px;">Complete Checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <form *ngIf="btn2">
+                    <div class="container">
+                        <div class="row">
+                           <div class="col-md-12">
+                                <label>Name on card</label>
+                                <input type="text" class="form-control" placeholder="Card name">
+                           </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label>Card number</label>
+                                <input type="text" class="form-control" placeholder="0000 0000 0000 0000">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label>Amount</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>CVC/CVV</label>
+                                <input type="text" class="form-control" placeholder="CVC">
+                            </div>
+                            <div class="col-md-6">
+                                <label>Expiry Date</label>
+                                <input type="text" class="form-control" placeholder="MM/YY">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button class="btn text-light" type="submit" style="background: rgba(0,8,51,0.9); padding: 5px; width: 100%; margin-bottom: 10px;">Complete Checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
+
+<app-footer></app-footer>

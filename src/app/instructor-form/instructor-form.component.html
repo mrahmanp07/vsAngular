@@ -1,0 +1,27 @@
+<app-header></app-header>
+
+<div class="container-fluid" id="src1">
+    <div class="row">
+        <!-- <<<Instructor Form>>> -->
+    <div class="container-fluid" style="background-image: url(/resources/assets/images/contact-bg.jpg); height: 100vh;">
+        <div class="row">
+            <div class="col-5" style="font-size: large; margin-top: 50px; margin-left: auto; margin-right: auto; display: block;">
+                <h2 class="text-light pb-3">Application Form</h2>
+                <form [formGroup]="form" (ngSubmit)="submit()">
+                    <input type="text" class="form-control" placeholder="Full Name" formControlName="applicantName"> <br>
+                    <input type="text" class="form-control" placeholder="Username" formControlName="applicantUsername"> <br>
+                    <input type="password" class="form-control" placeholder="Password" formControlName="applicantPassword"> <br>
+                    <input type="email" class="form-control" placeholder="Email" formControlName="applicantEmail"> <br>
+                    <input type="text" class="form-control" placeholder="Phone" formControlName="applicantPhone"> <br>
+                    <input type="text" class="form-control" placeholder="NID Number" formControlName="applicantNid"> <br>
+                    <input type="text" class="form-control" placeholder="Designation" formControlName="applicantDesignation"> <br>
+                    <input type="text" class="form-control" placeholder="Workplace" formControlName="applicantWorkplace"> <br>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

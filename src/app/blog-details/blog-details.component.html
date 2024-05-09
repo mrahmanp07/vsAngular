@@ -1,0 +1,72 @@
+<app-header></app-header>
+
+<div class="container-fluid" style="margin-bottom: 20px; min-height: 100vh;">
+    <div class="row" style="margin-top: 30px;">
+        <!-- <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <img src="../../assets/images/{{blog.blogPhoto}}" alt="" style="height: 300px; width: 500px;">
+        </div>
+        <div class="col-md-4">
+            <h5>{{blog.blogName}}</h5>
+            <p style="line-height: 0; color: cornflowerblue;">{{blog.blogPublisherName}}</p>
+            <p>{{blog.blogPublishDate}}</p>
+            <br>
+            <p>{{blog.blogIntroduction}}</p>
+        </div>
+        <div class="col-md-2"></div>
+
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <p>{{blog.blogDescription}}</p>
+        </div>
+        <div class="col-md-2"></div> -->
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <img src="../../assets/images/{{blog.blogPhoto}}" alt="" style="height: 100%; width: 100%;">
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <article>
+                        <h4>{{blog.blogName}}</h4>
+                        <p style="color: orange; line-height: .5;"><i class="fa-solid fa-pen-nib"></i> {{blog.blogPublisherName}}</p>
+                        <p><i class="fa-solid fa-calendar-days"></i> {{blog.blogPublishDate}}</p>
+                        <br>
+                        <p><i class="fa-solid fa-quote-left"></i> {{blog.blogIntroduction}} <i class="fa-solid fa-quote-right"></i></p>
+                    </article>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-11">
+                    <article>
+                        <p align="justify">{{blog.blogDescription}} {{blog.blogDescription}}</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <h4>Recent posts</h4>
+            <hr>
+            <div *ngFor="let blog of blogs">
+                <div class="row" style="background: aliceblue;">
+                    <div class="col-md-4">
+                        <img src="../../assets/images/{{blog.blogPhoto}}" alt="" style="height: 100%; width: 100%;">
+                    </div>
+                    <div class="col-md-8">
+                        <p style="font-weight: 500;">{{blog.blogName}}</p>
+                        <p style="color: orange; line-height: 0; font-size: smaller;">{{blog.blogPublisherName}}</p>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

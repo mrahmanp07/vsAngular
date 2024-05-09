@@ -1,0 +1,74 @@
+<app-header></app-header>
+
+<div class="container" style="min-height: 90vh;" *ngIf="currentUser">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8" style="margin-top: 20px; padding: 10px; background-image: url(../../assets/images/what-is-blockchain.jpg); background-position: center; background-size: cover;">
+            <div class="row" style="border-radius: 10px; width: 60%; margin-left: 10px; margin-bottom: 10px; ">
+                <div class="col-md-5"><p style="font-size: 20px; font-weight: 500;"><i class="fa-solid fa-id-badge"></i> Full Name</p></div>
+                <div class="col-md-7"><p style="font-size: 20px; font-weight: 500;">{{currentUser.user.name}}</p></div>
+            </div>
+            <div class="row" style="border-radius: 10px; width: 60%; margin-left: 10px; margin-bottom: 10px;">
+                <div class="col-md-5"><p style="font-size: 20px; font-weight: 500;"><i class="fa-solid fa-user"></i> Username</p></div>
+                <div class="col-md-7"><p style="font-size: 20px; font-weight: 500;">{{currentUser.user.username}}</p></div>
+            </div>
+            <div class="row" style="border-radius: 10px; width: 60%; margin-left: 10px; margin-bottom: 10px;">
+                <div class="col-md-5"><p style="font-size: 20px; font-weight: 500;"><i class="fa-solid fa-at"></i> Email</p></div>
+                <div class="col-md-7"><p style="font-size: 20px; font-weight: 500;">{{currentUser.user.email}}</p></div>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <button class="text-secondary" style="border: none;" (click)="history(currentUser.user.username)"><h3><i class="fa-solid fa-clipboard"></i> Purchase History</h3></button>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+    <br>
+    <br>
+    <div class="row" style="margin-bottom: 30px;" *ngFor="let purchaseCourse of purchaseCourses">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="row p-3 bg-white" style="border-radius: 20px; border: 1px solid dodgerblue;"  >
+                <div class="col-md-4" style="line-height: 1;">
+                <h6>{{purchaseCourse.purchaseCourseName}}</h6>
+                </div>
+                <div class="col-md-3">
+                    <p class="text-secondary">{{purchaseCourse.purchaseCoursePrice}} Taka</p>
+                </div>
+                <div class="col-md-3">
+                    <p class="text-secondary">{{purchaseCourse.purchaseCourseTime}}</p>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-outline-success" (click)="bton()">View</button>
+                </div>
+                <br>
+                <div class="col-md-2"></div>
+
+                <div class="col-md-4" *ngIf="btn">
+                    <img src="../../assets/images/unnamed.png" alt="" style="height: 200px; width: 200px;">
+                    <a href="../../assets/files/Programming Concepts and C ( PDFDrive ).pdf" style="text-decoration: none;">Programming Concepts and C ( PDFDrive ).pdf</a>
+                    <br>
+                    <button class="btn text-success"><i class="fa-solid fa-download"></i> <a href="../../assets/files/Programming Concepts and C ( PDFDrive ).pdf" style="text-decoration: none; color: green;"> Download</a></button>
+                </div>
+                <div class="col-md-4" *ngIf="btn">
+                    <video width="320" height="240" controls>
+                        <source src="../../assets/files/A day in a programmer's life - Animation.mp4" type="video/mp4">
+                    </video>
+                    <a href="../../assets/files/A day in a programmer's life - Animation.mp4" style="text-decoration: none;">A day in a programmer's life - Animation.mp4</a>
+                    <br>
+                    <button class="btn text-success"><i class="fa-solid fa-download"></i> <a href="../../assets/files/A day in a programmer's life - Animation.mp4" style="text-decoration: none; color: green;"> Download</a></button>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+
+
+
+<app-footer></app-footer>

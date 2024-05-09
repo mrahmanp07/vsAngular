@@ -1,0 +1,7 @@
+.nav{
+    margin-top: 50px;
+    /* position: fixed; */
+}
+.container-fluid{
+    min-height: 90vh;
+}

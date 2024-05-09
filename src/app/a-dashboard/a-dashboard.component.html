@@ -1,0 +1,46 @@
+<div class="body">
+    <section id="menu">
+        <div class="head_part">
+            <img src="../../assets/images/logo.png" alt="" style="height: 50px; width: 50px; float: left;">
+        </div>
+    
+        <div class="items">
+            <li><i class="fa-solid fa-house"></i><a href="adashboard">Home</a></li>
+            <li><i class="fa-solid fa-desktop"></i><a href="adashboard/aclassroom">Classroom</a></li>
+            <li><i class="fa-solid fa-server"></i><a href="adashboard/acourse">Course</a></li>
+            <li><i class="fa-solid fa-user"></i><a href="adashboard/instructor">Instructor <span class="badge" id="notification">{{countData}}</span></a></li>
+            <li><i class="fa-solid fa-blog"></i><a href="adashboard/ablog">Blog</a></li>
+            <li><i class="fa-solid fa-coins"></i><a href="adashboard/transaction">Transaction</a></li>
+            <li><i class="fa-solid fa-envelope"></i><a href="adashboard/message">Messages <span class="badge" id="notification">{{totalData}}</span></a></li>
+            <li><i class="fa-solid fa-wrench"></i><a href="#">Settings</a></li>
+        </div>
+    </section>
+
+    <section id="interface">
+        <div class="navigation">
+            <div class="n1">
+                <div>
+                    <i id="menu-btn" class="fa-solid fa-bars" ></i>
+                </div>
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+    
+            <div class="profile">
+                <i class="fa-solid fa-bell"></i>
+                <img src="../../assets/images/14.jpg" alt="">
+            </div>
+        </div>
+    
+        <router-outlet></router-outlet>
+    </section>
+</div>
+
+
+<script>
+    $('#menu-btn').click(function(){
+      $('#menu').toggleClass("active");
+  })
+</script>

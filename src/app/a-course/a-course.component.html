@@ -1,0 +1,172 @@
+<div style="margin-left: 20px; width: 90%; padding: 20px;">
+    <div class="container" style="margin-top: 100px;">
+        <div style=" border: none; border-radius: 5px; height: 40px; outline: none; font-size: 18px;" align="center"><label style="color: #33ccc5; font-weight: 600;"><i class="fa-solid fa-circle-plus"></i> Create Course</label></div>
+        <br>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <form [formGroup]="forms" (ngSubmit)="submit()">
+                    <div class="row form-group">
+                        <div class="col-md-2"><label>Category</label></div>
+                        <div class="col-md-4">
+                            <select class="form-control" formControlName="courseCatName2">
+                                <option hidden>Course Category</option>
+                                <option *ngFor="let category of categories">{{category.courseCatName}}</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2"><label>Instructor</label></div>
+                        <div class="col-md-4">
+                            <select class="form-control" formControlName="instructorName2">
+                                <option hidden>Instructor Name</option>
+                                <option *ngFor="let instructor of instructors">{{instructor.instructorName}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row form-group">
+                        <div class="col-md-2"><label>Course Name</label></div>
+                        <div class="col-md-4"><input type="text" class="form-control" formControlName="courseName"></div>
+                        <div class="col-md-2"><label>Duration</label></div>
+                        <div class="col-md-4"><input type="text" placeholder="In hours.." class="form-control" formControlName="courseDuration"></div>
+                    </div>
+                    <br>
+                    <div class="row form-group">
+                        <div class="col-md-2"><label>Article</label></div>
+                        <div class="col-md-4"><input type="text" placeholder="Number" class="form-control" formControlName="courseArticle"></div>
+                        <div class="col-md-2"><label>Resources</label></div>
+                        <div class="col-md-4"><input type="text" placeholder="Number" class="form-control" formControlName="courseResource"></div>
+                    </div>
+                    <br>
+                    <div class="row form-group">
+                        <div class="col-md-2"><label>Access</label></div>
+                        <div class="col-md-4"><input type="text" placeholder="Lifetime/Limited" class="form-control" formControlName="courseAccess"></div>
+                        <div class="col-md-2"><label>Date</label></div>
+                        <div class="col-md-4"><input type="date" class="form-control" formControlName="courseUploadDate"></div>
+                    </div>
+                    <br>
+                    <div class="row form-group">
+                        <div class="col-md-2"><label>Description</label></div>
+                        <div class="col-md-4"><textarea formControlName="courseDescription" id="" cols="30" rows="3" class="form-control"></textarea></div>
+                        <div class="col-md-2"><label>Curriculum</label></div>
+                        <div class="col-md-4"><textarea formControlName="courseCurriculum" id="" cols="30" rows="3" class="form-control"></textarea></div>
+                    </div>
+                    <br>
+                    <div class="row form-group">
+                        <div class="col-md-2"><label>Price</label></div>
+                        <div class="col-md-4"><input type="text" class="form-control" formControlName="coursePrice"></div>
+                        <div class="col-md-2"><label>Discount</label></div>
+                        <div class="col-md-4"><input type="text" class="form-control" formControlName="courseDiscount"></div>
+                    </div>
+                    <br>
+                    <div class="row form-group">
+                        <div class="col-md-2"><label>Photo</label></div>
+                        <div class="col-md-10"><input type="text" placeholder="link here" formControlName="coursePic" class="form-control"></div>
+                    </div>
+                    <br>
+                    <div class="row form-group">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-10 form-group">
+                            <input type="submit" class="btn btn-primary form-control" value="Submit" >
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row form-group">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-10 form-group"><a href="adashboard/acourseview" class="btn btn-outline-danger form-control"><i class="fa-solid fa-eye"></i> Show</a></div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+</div>
+<br>
+<!-- <div style="margin-top: 30px; margin-left: 20px; width: 90%; padding: 20px;">
+    <div class="container" style="margin-top: 100px;">
+        <div style=" border: none; border-radius: 5px; height: 40px; outline: none; font-size: 18px;" align="center"><label style="color: #33ccc5; font-weight: 600;"><i class="fa-solid fa-circle-plus"></i> Upload Course Files</label></div>
+        <br> -->
+        <!-- <div class="row">
+            <div class="col-md-8">
+                <select formControlName="courseId" class="form-control">
+                    <option [(ngModel)]="id">55</option>
+                </select>
+            </div>
+            <div class="col-md-4"><label>Course Name</label></div>
+        </div>
+        <br> -->
+        <!-- <div class="row">
+            <div class="col-md-8">
+                <label class="btn btn-default p-0">
+                  <input type="file" multiple (change)="selectFiles($event)" class="form-control"/>
+                </label>
+              </div>
+            
+              <div class="col-md-4">
+                <button
+                  class="btn btn-success btn-sm"
+                  [disabled]="!selectedFiles"
+                  (click)="uploadFiles()"
+                >
+                  Upload
+                </button>
+              </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div *ngFor="let progressInfo of progressInfos" class="mb-2">
+                    <span>{{ progressInfo.fileName }}</span>
+                    <div class="progress">
+                      <div
+                        class="progress-bar progress-bar-info"
+                        role="progressbar"
+                        attr.aria-valuenow="{{ progressInfo.value }}"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        [ngStyle]="{ width: progressInfo.value + '%' }"
+                      >
+                        {{ progressInfo.value }}%
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div *ngIf="message.length" class="alert alert-secondary my-3" role="alert">
+                    <ul *ngFor="let msg of message; let i = index">
+                      <li>{{ msg }}</li>
+                    </ul>
+                  </div>
+                  
+                  <div class="card mt-3">
+                    <div class="card-header">List of Files</div>
+                    <ul class="list-group list-group-flush">
+                      <li *ngFor="let file of fileInfos | async" class="list-group-item">
+                        <p><b>Name: </b>{{file.name}}</p><br>
+                        <b>URL: </b><a href="{{ file.url }}">{{ file.name }}</a>
+                      </li>
+                    </ul>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>  -->
+<div class="" style="margin-top: 30px; margin-left: 20px; width: 90%; padding: 20px;">
+    <div>
+        <div class="container" style="margin-top: 100px;">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <form [formGroup]="form" (ngSubmit)="catSubmit()">
+                        <div style=" border: none; border-radius: 5px; height: 40px; outline: none; font-size: 18px;" align="center"><label style="color: #33ccc5; font-weight: 600;"><i class="fa-solid fa-circle-plus"></i> Course Category</label></div>
+                        <br>
+                        <div class="form-group"><input type="text" class="form-control" formControlName="courseCatName"></div>
+                        <br>
+                        <div class="form-group"><input type="submit" value="Save" class="btn btn-primary form-control"></div>
+                        <br>
+                        <div class="form-group"><a href="adashboard/acourseview" class="btn btn-outline-danger form-control"><i class="fa-solid fa-eye"></i> Show</a></div>
+                    </form>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+    </div>
+</div>

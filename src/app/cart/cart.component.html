@@ -1,0 +1,51 @@
+<app-header></app-header>
+<app-page-not-found [visible]="!cart || !cart.items.length"
+ notFoundMessage="Cart page empty!"
+ resetLinkText="Go to Home"></app-page-not-found>
+<div class="container-fluid" id="src1">
+    <div class="container p-5" style="width:60%;">
+        <div>
+            <ul style="list-style: none;">
+                <h1 class="text-center" style="color: #3CB371;"><span><img src="../../assets/images/icons8-shopping-cart-60.png" alt=""></span> My Cart</h1>
+                <li *ngFor="let cartitem of cart.items">
+                    <div class="row p-3 bg-white" id="cart" style="border-radius: 20px; border: 1px solid dodgerblue;">
+                        <div class="col-md-2">
+                            <div><img src="../../assets/images/{{cartitem.course.coursePic}}" alt="" style="height: 100px; width: 100px; border-radius: 10px;"></div>
+                        </div>
+                        <div class="col-md-4" style="line-height: 1;">
+                        <h6>{{cartitem.course.courseName}}</h6>
+                            <p class="text-secondary">{{cartitem.course.instructorName2}}</p>
+                            <p><span style="color:Orange; font-size: 15px; font-weight: 500;">4.5 </span><span><img src="../../assets/images/icons8-star-filled-15.png" alt=""></span><span><img src="../../assets/images/icons8-star-filled-15.png" alt=""></span><span><img src="../../assets/images/icons8-star-filled-15.png" alt=""></span><span><img src="../../assets/images/icons8-star-filled-15.png" alt=""></span><span><img src="../../assets/images/icons8-star-half-empty-15.png" alt=""></span></p>
+                        </div>
+                        <div class="col-md-4">
+                            <table class="table">
+                                <tr>
+                                    <td>Article</td>
+                                    <td class="text-secondary">{{cartitem.course.courseArticle}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Access</td>
+                                    <td class="text-secondary">{{cartitem.course.courseAccess}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Resource</td>
+                                    <td class="text-secondary">{{cartitem.course.courseResource}}</td>
+                                </tr>
+                            </table>
+                            <h4 style="color:DodgerBlue; border-radius: 10%;">{{cartitem.course.coursePrice}} Taka</h4>
+                        </div>
+                        <div class="col-md-2">
+                            <a class="btn btn-outline-success" style=" font-size: 15px;" (click)="toPayment()">Buy</a>
+                            <a class="btn btn-danger" style="border: none; font-size: 15px; margin-left: 10px;" (click)="removeCart(cartitem)"><i class="fa-solid fa-circle-xmark"></i></a>
+                        </div>
+                    </div>
+                    <br>
+                </li>
+            </ul>
+            <hr>
+            <p style="float: right;">Total cost : <span style="font-weight: 500;">{{totalPrice}}</span></p>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,54 @@
+<app-header></app-header>
+<!-- <<<<<< Welcome Content >>>> -->
+<div class="container-fluid" style="background-image: url(../../assets/images/demo-parallax.jpg); background-position: center; background-size: cover; min-height: 90vh; width:100%;">
+  <div class="row">
+    <div class="col-md-3"></div>
+
+    <div class="col-md-6" style="margin-top: 150px; text-align: center;">
+        <h1 class="text-white text-center">Publish your passions, your way</h1>
+        <p class="text-white" style="font-size: 20px; ">Behind the technology is a diverse collective of people, collaborating from around the world. We’re united by the spirit of open source, and the freedom to build, transform, and share without barriers. </p>
+        <button style="padding: 15px; background: Orange; color: white; border: none;" routerLink="/createblog">Create your blog</button>
+    </div>
+
+    <div class="col-md-3"></div>
+  </div>
+</div>
+<br>
+<br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <nav class="nav">
+                <h3 class="text-secondary" style="font-weight: 500; margin-left: 100px; margin-top: 20px;"><i class="fa-solid fa-bars"></i> Categories</h3>
+                <button class="nav-link btn btn-light" style="font-weight: 500; margin-left: 50px; padding: 10px; border: 1px solid Orange; color: Orange;" >Software Development</button>
+                <button class="nav-link btn btn-light" style="font-weight: 500; margin-left: 50px; padding: 10px; border: 1px solid Orange; color: Orange;" >Artificial Intelligence</button>
+                <button class="nav-link btn btn-light" style="font-weight: 500; margin-left: 50px; padding: 10px; border: 1px solid Orange; color: Orange;" >Device Technology</button>
+                <button class="nav-link btn btn-light" style="font-weight: 500; margin-left: 50px; padding: 10px; border: 1px solid Orange; color: Orange;" >Networking</button>
+            </nav>
+        </div>
+    </div>
+</div>
+<br>
+<div class="container-fluid" style="margin-bottom: 20px;">
+    <div class="row" *ngFor="let blog of blogs" style="margin-top: 50px;">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <img src="../../assets/images/{{blog.blogPhoto}}" alt="" style="height: 100%; width: 100%;">
+        </div>
+        <div class="col-md-4">
+            <div style="box-sizing: content-box;">
+                <h5>{{blog.blogName}}</h5>
+                <p style="line-height: 0; color: orange;">{{blog.blogPublisherName}}</p>
+                <p>{{blog.blogPublishDate}}</p>
+                <br>
+                <p>{{blog.blogIntroduction}}</p>
+                <button style="background: midnightblue; color: white;" [routerLink]="['/blogdetails/', blog.blog_id]">Read more</button>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+
+
+
+<app-footer></app-footer>

@@ -1,0 +1,55 @@
+<app-header></app-header>
+
+<div class="container-fluid" id="src1">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 mt-5 mb-3">
+            <h3 class="text-warning" style="text-align: center;"><i class="fa-solid fa-square-plus"></i> Upload your blog</h3>
+            <br>
+            <form [formGroup]="form" (ngSubmit)="submit()">
+                <div class="row">
+                    <div class="col-md-2"><label class="text-light">Category</label></div>
+                    <div class="col-md-4"><select formControlName="blogPostCategory" class="form-control">
+                        <option value="Software Development">Software Development</option>
+                        <option value="Artificial Intelligence">Artificial Intelligence</option>
+                        <option value="Device Technology">Device Technology</option>
+                        <option value="Networking">Networking</option>
+                    </select></div>
+                    <div class="col-md-2"><label class="text-light">Blog Name</label></div>
+                    <div class="col-md-4"><input type="text" formControlName="blogPostName" class="form-control"></div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-2"><label class="text-light">Publisher Name</label></div>
+                    <div class="col-md-4"><input type="text" formControlName="blogPostPublisherName" class="form-control"></div>
+                    <div class="col-md-2"><label class="text-light">Publish Date</label></div>
+                    <div class="col-md-4"><input type="date" formControlName="blogPostPublishDate" class="form-control"></div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-2"><label class="text-light">Publisher Username</label></div>
+                    <div class="col-md-4"><input type="text" formControlName="blogPostPublisherUsername" class="form-control"></div>
+                    <div class="col-md-2"><label class="text-light">Blog Photo</label></div>
+                    <div class="col-md-4"><input type="text" formControlName="blogPostPhoto" class="form-control"></div>
+                </div>
+                <br><div class="row">
+                    <div class="col-md-2"><label class="text-light">Blog Introduction</label></div>
+                    <div class="col-md-10"><textarea formControlName="blogPostIntroduction" id="" cols="30" rows="3" class="form-control"></textarea></div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-2"><label class="text-light">Blog Description</label></div>
+                    <div class="col-md-10"><textarea formControlName="blogPostDescription" id="" cols="30" rows="7" class="form-control"></textarea></div>
+                </div>
+                <br>
+                <div align="center">
+                    <button class="btn btn-lg btn-outline-warning" type="submit">Post</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+
+<app-footer></app-footer>
+

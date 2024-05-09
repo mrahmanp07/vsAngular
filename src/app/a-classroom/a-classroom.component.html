@@ -1,0 +1,79 @@
+<div class="" style="margin-top: 100px; margin-left: 20px; width: 90%; background: white; padding: 20px;">
+    <div class="">
+      <h5>Create Classroom Category</h5>
+    </div>
+    <div class="">
+        <div class="container" style="margin-top: 100px;">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6">
+                    <form action="/course/submitCat" method="POST">
+                        <div style="background: #33ccc5; border: none; border-radius: 5px; height: 40px; outline: none; font-size: 18px;" align="center"><label class="text-light">Classroom Category</label></div>
+                        <br>
+                        <div><input type="text" class="form-control" name="course_cat_name"></div>
+                        <br>
+                        <div><input type="submit" value="Save" class="btn btn-block btn-primary"></div>
+                    </form>
+                </div>
+                <div class="col-3"></div>
+            </div>
+        </div>
+    </div>
+  </div>
+<br>
+<br>
+<div class="" style="margin-top: 100px; margin-left: 20px; width: 90%; background: white; padding: 20px;">
+    <div class="">
+      <h5>Create Classroom Category</h5>
+    </div>
+    <div class="container" style="margin-top: 100px;">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <form action="/course/submit" method="POST">
+                    <div class="row form-group" align="center">
+                        <div class="col-12">
+                            <select name="course_cat_name" class="form-control bg-secondary text-light">
+                                <option hidden>Classroom Category</option>
+                                <option>Python</option>
+                                <option>Java</option>
+                                <option>C#</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row form-group">
+                        <div class="col-2"><label>Classroom Name</label></div>
+                        <div class="col-4"><input type="text" class="form-control" name="course_name"></div>
+                        <div class="col-2">Duration</div>
+                        <div class="col-4"><input type="text" placeholder="In hours.." class="form-control" name="course_duration"></div>
+                    </div>
+                    <br>
+                    <div class="row form-group">
+                        <div class="col-2"><label>Start Time</label></div>
+                        <div class="col-4"><input type="text" placeholder="Lifetime/Limited" class="form-control" name="course_access"></div>
+                        <div class="col-2">Instructor Name</div>
+                        <div class="col-4"><input type="date" class="form-control" name="course_upload_date"></div>
+                    </div>
+                    <br>
+                    <div class="row form-group">
+                        <div class="col-2"><label>Description</label></div>
+                        <div class="col-4"><textarea name="course_description" id="" cols="30" rows="3" class="form-control"></textarea></div>
+                        <div class="col-2">Curriculum</div>
+                        <div class="col-4"><textarea name="course_curriculum" id="" cols="30" rows="3" class="form-control"></textarea></div>
+                    </div>
+                    <br>
+                    <div class="row form-group">
+                        <div class="col-4"><label>Upload File</label></div>
+                        <div class="col-8"><input type="file" class="form-control"></div>
+                    </div>
+                    <br>
+                    <div class="col-12">
+                        <input type="submit" class="btn btn-outline-primary btn-block" value="Submit">
+                    </div>
+                </form>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+  </div>

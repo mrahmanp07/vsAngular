@@ -1,0 +1,94 @@
+<app-header></app-header>
+<!-- card details -->
+<div class="container-fluid" style="background: aliceblue; padding: 20px;">
+    <div class="row">
+      <div class="col-md-8" style="margin: 10px 0 50px 0;">
+        <div class="card" style="background: white; border-radius: 15px;">
+          <img src="../../assets/images/{{course.coursePic}}" alt="" style="height: 500px; margin: 20px; border-radius: 20px;">
+          <div class="card-body">
+
+            <h5 style="font-weight: 600;">{{course.courseName}}}</h5>
+            <br>
+            <h4 class="text-center">Description</h4>
+            <p style="align-items: center;">{{course.courseDescription}}</p>
+              <h4 class="text-center">Curriculum</h4>
+              <p>{{course.courseCurriculum}}</p>
+              <h4 class="text-center">Certification</h4>
+              <p>Test Approaches Course Module
+                Testing Techniques Course Module
+                Test Automation Course Module
+                Performance Testing Course Module
+                Cybersecurity Testing Course Module
+                Usability Testing Course Module
+                Testing for IoT and Mobile Course Module
+                DevOps Testing (QAOps, DevTestOps) Course Module
+                API Testing Course Module
+                Testing Using the Cloud Course Module
+                Plus free bonus training on ERP testing, testing methodologies, testing trends, and more!</p>
+          </div>
+        </div>
+        
+        
+
+      </div>
+      <div class="col-md-4" style=" border-radius: 15px; margin: 10px 0 10px 0; ">
+        <div style="background: white; border: 1px solid #33ccc5; border-radius: 15px; padding: 10px;">
+            <div class="text-center">
+                <p class="d-inline text-light" style="background: #FF6347; padding:0 5px 0 5px; border-radius: 15px; font-size: 18px; font-weight: 600;">Tk. {{course.coursePrice}}</p>
+            </div>
+          <table class="table">
+            <tr>
+              <td><i class="fa-solid fa-user-tie"></i> instructor</td>
+              <td>{{course.instructorName2}}</td>
+            </tr>
+            <tr>
+              <td><i class="fa-solid fa-clock"></i> Duration</td>
+              <td>{{course.courseDuration}}</td>
+            </tr>
+            <tr>
+              <td><i class="fa-solid fa-book"></i> Lecture</td>
+              <td>32</td>
+            </tr>
+            <tr>
+              <td><i class="fa-solid fa-file"></i> Articles</td>
+              <td>{{course.courseArticle}}</td>
+              </tr>
+            <tr>
+              <td><i class="fa-solid fa-download"></i> Resources</td>
+              <td>{{course.courseResource}}</td>
+            </tr>
+            <tr>
+              <td><i class="fa-solid fa-circle-right"></i> Access</td>
+              <td>{{course.courseAccess}}</td>
+            </tr>
+          </table>
+          <div class="text-center">
+            <a class="btn btn-sm btn-info text-light" style="padding: 5px;" (click)="toPayment()">Enroll Now</a>
+            <a class="btn btn-sm btn-warning" style="margin-left: 20px; padding-top: 0px; padding: 5px; font-size: 15px;" (click)="addCart()"><i class="fa-solid fa-cart-plus"></i> Add to cart</a>
+          </div>
+        </div>
+        <div class="cpy" style="border: none; background: aliceblue;">
+          <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="text-center">
+                    <p class="text-info">Share Course</p>
+                  </div>
+                    <div>
+                      <ul class="social_icon" style="display: flex; justify-content: center;">
+                          <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                          <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                          <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                          <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                          <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                      </ul>
+                    </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<app-footer></app-footer>

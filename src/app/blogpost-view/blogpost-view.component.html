@@ -1,0 +1,47 @@
+<div style="margin-top: 50px; margin-left: 20px; width: 90%; padding: 20px;"> 
+    <div class="container" style="margin-top: 100px;">
+        <div style=" border: none; border-radius: 5px; height: 40px; outline: none; font-size: 18px;" align="center"><h4 style="color: midnightblue; font-weight: 600;"> Verify Blog</h4></div>
+        <br>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <form [formGroup]="form" (ngSubmit)="submit()">
+                    <div class="row">
+                        <div class="col-md-2"><label>Category</label></div>
+                        <div class="col-md-4"><input type="text"  class="form-control" [(ngModel)]="blogPost.blogPostCategory"></div>
+                        <div class="col-md-2"><label>Blog Name</label></div>
+                        <div class="col-md-4"><input type="text" formControlName="blogName" class="form-control" [(ngModel)]="blogPost.blogPostName"></div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-2"><label>Publisher Name</label></div>
+                        <div class="col-md-4"><input type="text" formControlName="blogPublisherName" class="form-control" [(ngModel)]="blogPost.blogPostPublisherName"></div>
+                        <div class="col-md-2"><label>Publish Date</label></div>
+                        <div class="col-md-4"><input type="text" formControlName="blogPublishDate" class="form-control" [(ngModel)]="blogPost.blogPostPublishDate"></div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-2"><label>Publisher Username</label></div>
+                        <div class="col-md-4"><input type="text" formControlName="blogPublisherUsername" class="form-control" [(ngModel)]="blogPost.blogPostPublisherUsername"></div>
+                        <div class="col-md-2"><label>Blog Photo</label></div>
+                        <div class="col-md-4"><input type="text" formControlName="blogPhoto" class="form-control" [(ngModel)]="blogPost.blogPostPhoto"></div>
+                    </div>
+                    <br><div class="row">
+                        <div class="col-md-2"><label>Blog Introduction</label></div>
+                        <div class="col-md-10"><textarea formControlName="blogIntroduction" id="" cols="30" rows="5" class="form-control" [(ngModel)]="blogPost.blogPostIntroduction"></textarea></div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-2"><label>Blog Description</label></div>
+                        <div class="col-md-10"><textarea formControlName="blogDescription" id="" cols="30" rows="10" class="form-control" [(ngModel)]="blogPost.blogPostDescription"></textarea></div>
+                    </div>
+                    <br>
+                    <div align="center">
+                        <button class="btn btn-lg btn-outline-warning" type="submit">Done</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+</div>

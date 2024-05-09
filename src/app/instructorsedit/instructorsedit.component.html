@@ -1,0 +1,53 @@
+<div style="margin-top: 50px; margin-left: 20px; width: 90%; padding: 20px;"> 
+    <div class="container" style="margin-top: 100px;">
+        <div style=" border: none; border-radius: 5px; height: 40px; outline: none; font-size: 18px;" align="center"><label style="color: #33ccc5; font-weight: 600;"> Update Instructor</label></div>
+        <br>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <form [formGroup]="form" (ngSubmit)="update()">
+                    <div class="row form-group">
+                        <div class="col-md-2"><label>Name</label></div>
+                        <div class="col-md-4"><input type="text" class="form-control" formControlName="instructorName" [(ngModel)]="instructor.instructorName"></div>
+                        <div class="col-md-2"><label>Username</label></div>
+                        <div class="col-md-4"><input type="text" class="form-control" formControlName="instructorUsername" [(ngModel)]="instructor.instructorUsername"></div>
+                    </div>
+                    <br>
+                    <div class="row form-group">
+                        <div class="col-md-2"><label>Password</label></div>
+                        <div class="col-md-4"><input type="password" class="form-control" formControlName="instructorPassword" [(ngModel)]="instructor.instructorPassword"></div>
+                        <div class="col-md-2"><label>Email</label></div>
+                        <div class="col-md-4"><input type="text" class="form-control" formControlName="instructorEmail" [(ngModel)]="instructor.instructorEmail"></div>
+                    </div>
+                    <br>
+                    <div class="row form-group">
+                        <div class="col-md-2"><label>Phone</label></div>
+                        <div class="col-md-4"><input type="text" class="form-control" formControlName="instructorPhone" [(ngModel)]="instructor.instructorPhone"></div>
+                        <div class="col-md-2"><label>NID</label></div>
+                        <div class="col-md-4"><input type="text" class="form-control" formControlName="instructorNid" [(ngModel)]="instructor.instructorNid"></div>
+                    </div>
+                    <br>
+                    <div class="row form-group">
+                        <div class="col-md-2"><label>Designation</label></div>
+                        <div class="col-md-4"><input type="text" class="form-control" formControlName="instructorDesignation" [(ngModel)]="instructor.instructorDesignation"></div>
+                        <div class="col-md-2"><label>Workplace</label></div>
+                        <div class="col-md-4"><input type="text" class="form-control" formControlName="instructorWorkplace" [(ngModel)]="instructor.instructorWorkplace"></div>
+                    </div>
+                    <br>
+                    <div class="row form-group">
+                        <div class="col-md-2"><label>Photo</label></div>
+                        <div class="col-md-10"><input type="text" class="form-control" formControlName="instructorPic" [(ngModel)]="instructor.instructorPic"></div>
+                    </div>
+                    <br>
+                    <div class="row form-group">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-10 form-group">
+                            <input type="submit" class="btn btn-primary form-control" value="Update" >
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+/* <<<<social site>>>> */
+ul.social_icon {
+    list-style: none;
+  }
+
+  .social_icon li {
+    font-size: 25px;
+    margin: 5px 10px 0;
+  }
+  .cpy {
+    background: #33ccc5;
+    min-height: 185px;
+    padding: 50px 0;
+  }
+
+  .cpy p {
+    margin: 10px 0 0 0;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+  }

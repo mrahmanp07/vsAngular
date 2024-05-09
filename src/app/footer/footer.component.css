@@ -1,0 +1,30 @@
+/* <<<<footer>>>> */
+ul.social_icon {
+    list-style: none;
+  }
+  
+  .social_icon li {
+    color: aliceblue;
+    font-size: 25px;
+    margin: 5px 10px 0;
+  }
+  .cpy {
+    background: linear-gradient(to right, #141E30, #243B55);
+    min-height: 70px;
+    padding: 5px 0;
+  }
+  
+  .cpy p {
+    margin: 10px 0 0 0;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  
+  .social_icon li a i{
+    color: aliceblue;
+  }
+  
+  .social_icon li a i:hover{
+    color: #00BFFF;
+  }
